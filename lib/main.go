@@ -10,7 +10,7 @@ import "github.com/jdeng/uaparser"
 
 //export ParseUserAgent
 func ParseUserAgent(s *C.char) *C.char {
-	return C.CString(uap.Parse(C.GoString(s)).ShortName())
+	return C.CString(uaparser.Parse(C.GoString(s)).ShortName())
 }
 
 //export FreeUserAgent
