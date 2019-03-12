@@ -1,2 +1,2 @@
-go build -o libuap.so -buildmode=c-shared main.go
-gcc -o test main.c -L. -luap
+go build -o libuap.a -buildmode=c-archive main.go
+gcc -o test main.c libuap.a
