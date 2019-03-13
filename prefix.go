@@ -9,6 +9,11 @@ func handle_rv(ua *UserAgent, reco *recognizer, sec *section) bool {
 	return true
 }
 
+func handle_smarttv(ua *UserAgent, reco *recognizer, sec *section) bool {
+	ua.DeviceType = SmartTV
+	return true
+}
+
 // Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.2; Trident/6.0)
 func handle_browser_version(ua *UserAgent, reco *recognizer, sec *section) bool {
 	sec.version = strings.TrimSpace(strings.TrimPrefix(sec.name, reco.prefix))
